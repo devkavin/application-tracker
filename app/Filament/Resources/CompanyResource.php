@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
+use App\Filament\Resources\RecruiterResource\RelationManagers\RecruiterRelationManager;
 use App\Models\Company;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
@@ -57,7 +58,7 @@ class CompanyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            'recruiters' => RecruiterRelationManager::class,
         ];
     }
 
